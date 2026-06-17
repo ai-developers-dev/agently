@@ -4,13 +4,19 @@ import {
   RefreshCw,
   Shield,
   DollarSign,
-  Sparkles,
   Megaphone,
 } from "lucide-react";
 import { Container } from "@/components/site/container";
 import { PageHeader } from "@/components/marketing/page-header";
 import { ProductMockup } from "@/components/marketing/product-mockup";
 import { CtaBand } from "@/components/marketing/cta-band";
+import {
+  PipelineVisual,
+  PolicyVisual,
+  RenewalVisual,
+  CommissionVisual,
+  CampaignVisual,
+} from "@/components/marketing/product-visuals";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -26,6 +32,7 @@ type Block = {
   title: string;
   body: string;
   bullets: string[];
+  visual: React.ReactNode;
 };
 
 const BLOCKS: Block[] = [
@@ -40,6 +47,7 @@ const BLOCKS: Block[] = [
       "Lead source and conversion tracking",
       "Revenue forecasting built in",
     ],
+    visual: <PipelineVisual />,
   },
   {
     id: "policies",
@@ -52,6 +60,7 @@ const BLOCKS: Block[] = [
       "All lines: P&C, life, health, commercial",
       "Document storage on every policy",
     ],
+    visual: <PolicyVisual />,
   },
   {
     id: "renewals",
@@ -64,6 +73,7 @@ const BLOCKS: Block[] = [
       "Renewal revenue dashboard",
       "30 / 60 / 90-day windows",
     ],
+    visual: <RenewalVisual />,
   },
   {
     id: "commissions",
@@ -76,6 +86,7 @@ const BLOCKS: Block[] = [
       "Paid vs. pending visibility",
       "Exportable reports",
     ],
+    visual: <CommissionVisual />,
   },
   {
     id: "campaigns",
@@ -88,6 +99,7 @@ const BLOCKS: Block[] = [
       "Built-in Facebook & Google ad campaigns",
       "Leads flow straight into your pipeline",
     ],
+    visual: <CampaignVisual />,
   },
 ];
 
@@ -142,10 +154,8 @@ export default function ProductPage() {
                   </ul>
                 </div>
 
-                <div className="rounded-2xl border border-[#eef1f5] bg-[linear-gradient(135deg,#f6f9fc,#eef0ff)] p-8">
-                  <div className="flex aspect-[4/3] items-center justify-center rounded-xl bg-white/70">
-                    <Sparkles className="size-10 text-brand/40" />
-                  </div>
+                <div className="rounded-2xl border border-[#eef1f5] bg-[linear-gradient(135deg,#f6f9fc,#eef0ff)] p-6 sm:p-8">
+                  {block.visual}
                 </div>
               </div>
             </Container>
