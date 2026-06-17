@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Geist', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+  @keyframes ag-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes ag-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+</style>
+</helmet>
+
+<div style="background: #eceff3; min-height: 100vh; padding: 56px 24px 80px; font-family: 'Geist', sans-serif;">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 72px;">
+
+  <!-- ============ HEADER OF SHOWCASE ============ -->
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="agmark" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#9D8BFF"></stop><stop offset="0.5" stop-color="#635BFF"></stop><stop offset="1" stop-color="#4B45C6"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="40" height="40" rx="11" fill="url(#agmark)"></rect>
+      <path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#ffffff"></path>
+      <circle cx="20" cy="26.4" r="2.5" fill="#ffffff"></circle>
+    </svg>
+    <div>
+      <div style="font-size: 21px; font-weight: 700; color: #0A2540; letter-spacing: -0.02em;">Agently — Brand &amp; Product System</div>
+      <div style="font-size: 14px; color: #62708a; font-weight: 500;">CRM for insurance agents · Stripe-inspired identity</div>
+    </div>
+  </div>
+
+  <!-- ============ 1. LOGO SYSTEM ============ -->
+  <section>
+    <div style="font-family:'Geist Mono',monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #635BFF; margin-bottom: 14px;">01 — Identity</div>
+    <div style="background: #fff; border-radius: 16px; box-shadow: 0 1px 2px rgba(10,37,64,0.06), 0 12px 36px rgba(10,37,64,0.08); overflow: hidden;">
+      <!-- primary lockup band -->
+      <div style="display: grid; grid-template-columns: 1.15fr 1fr;">
+        <div style="padding: 56px 56px; display: flex; flex-direction: column; justify-content: center; gap: 28px; border-right: 1px solid #eef1f5;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <svg width="46" height="46" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="11" fill="url(#agmark)"></rect>
+              <path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#ffffff"></path>
+              <circle cx="20" cy="26.4" r="2.5" fill="#ffffff"></circle>
+            </svg>
+            <span style="font-size: 30px; font-weight: 700; color: #0A2540; letter-spacing: -0.03em;">Agently</span>
+          </div>
+          <div style="font-size: 15px; line-height: 1.6; color: #62708a; max-width: 360px;">The mark is an <strong style="color:#0A2540;">A</strong> built from two connected strokes meeting at a contact node — protection (the chevron) plus the relationship at its center. Squircle, 28% corner radius, indigo gradient.</div>
+        </div>
+        <div style="background: linear-gradient(150deg,#e7e4ff 0%,#8d7bff 48%,#635bff 72%,#b46bff 100%); display: flex; align-items: center; justify-content: center; gap: 14px; padding: 48px;">
+          <svg width="46" height="46" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="11" fill="#ffffff" fill-opacity="0.16"></rect>
+            <path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#ffffff"></path>
+            <circle cx="20" cy="26.4" r="2.5" fill="#ffffff"></circle>
+          </svg>
+          <span style="font-size: 30px; font-weight: 700; color: #ffffff; letter-spacing: -0.03em;">Agently</span>
+        </div>
+      </div>
+      <!-- spec strip -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #eef1f5;">
+        <div style="padding: 32px 28px; border-right: 1px solid #eef1f5; display:flex; flex-direction:column; align-items:center; gap:14px;">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8a94a6;">Mark</div>
+          <svg width="56" height="56" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="11" fill="url(#agmark)"></rect><path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#fff"></path><circle cx="20" cy="26.4" r="2.5" fill="#fff"></circle></svg>
+        </div>
+        <div style="padding: 32px 28px; border-right: 1px solid #eef1f5; display:flex; flex-direction:column; align-items:center; gap:14px;">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8a94a6;">Reverse</div>
+          <div style="width:56px;height:56px;border-radius:14px;background:#0A2540;display:flex;align-items:center;justify-content:center;">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 10.5 L29 30 L24.8 30 L20 18.6 L15.2 30 L11 30 Z" fill="#fff"></path><circle cx="20" cy="26" r="2.2" fill="#635BFF"></circle></svg>
+          </div>
+        </div>
+        <div style="padding: 32px 28px; border-right: 1px solid #eef1f5; display:flex; flex-direction:column; align-items:center; gap:14px;">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8a94a6;">Mono</div>
+          <svg width="56" height="56" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="11" fill="#0A2540"></rect><path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#fff"></path><circle cx="20" cy="26.4" r="2.5" fill="#fff"></circle></svg>
+        </div>
+        <div style="padding: 32px 28px; display:flex; flex-direction:column; align-items:center; gap:14px;">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8a94a6;">Favicon</div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="11" fill="url(#agmark)"></rect><path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#fff"></path><circle cx="20" cy="26.4" r="2.5" fill="#fff"></circle></svg>
+            <svg width="20" height="20" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="11" fill="url(#agmark)"></rect><path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#fff"></path><circle cx="20" cy="26.4" r="2.5" fill="#fff"></circle></svg>
+          </div>
+        </div>
+      </div>
+      <!-- color + type strip -->
+      <div style="display:grid; grid-template-columns: 1.4fr 1fr; border-top: 1px solid #eef1f5;">
+        <div style="padding: 32px 28px; border-right: 1px solid #eef1f5;">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8a94a6; margin-bottom:16px;">Palette</div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <div style="flex:none;"><div style="width:76px;height:52px;border-radius:8px;background:#635BFF;"></div><div style="font-family:'Geist Mono',monospace;font-size:10px;color:#62708a;margin-top:6px;">#635BFF</div><div style="font-size:11px;color:#8a94a6;">Indigo</div></div>
+            <div style="flex:none;"><div style="width:76px;height:52px;border-radius:8px;background:#0A2540;"></div><div style="font-family:'Geist Mono',monospace;font-size:10px;color:#62708a;margin-top:6px;">#0A2540</div><div style="font-size:11px;color:#8a94a6;">Navy</div></div>
+            <div style="flex:none;"><div style="width:76px;height:52px;border-radius:8px;background:#425466;"></div><div style="font-family:'Geist Mono',monospace;font-size:10px;color:#62708a;margin-top:6px;">#425466</div><div style="font-size:11px;color:#8a94a6;">Slate</div></div>
+            <div style="flex:none;"><div style="width:76px;height:52px;border-radius:8px;background:#f6f9fc;border:1px solid #eef1f5;"></div><div style="font-family:'Geist Mono',monospace;font-size:10px;color:#62708a;margin-top:6px;">#F6F9FC</div><div style="font-size:11px;color:#8a94a6;">Mist</div></div>
+            <div style="flex:none;"><div style="width:128px;height:52px;border-radius:8px;background:linear-gradient(120deg,#d4f3ff,#8d7bff 45%,#635bff 68%,#ff8ec7);"></div><div style="font-family:'Geist Mono',monospace;font-size:10px;color:#62708a;margin-top:6px;">aurora</div><div style="font-size:11px;color:#8a94a6;">Gradient</div></div>
+          </div>
+        </div>
+        <div style="padding: 32px 28px;">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8a94a6; margin-bottom:16px;">Typeface — Geist</div>
+          <div style="font-size:34px; font-weight:700; color:#0A2540; letter-spacing:-0.03em; line-height:1;">Aa</div>
+          <div style="font-size:13px; color:#62708a; margin-top:10px; line-height:1.6;">Geist for display &amp; body · <span style="font-family:'Geist Mono',monospace;">Geist Mono</span> for figures and code.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. LANDING PAGE ============ -->
+  <section>
+    <div style="font-family:'Geist Mono',monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #635BFF; margin-bottom: 14px;">02 — Landing Page</div>
+    <div style="background: #fff; border-radius: 16px; box-shadow: 0 1px 2px rgba(10,37,64,0.06), 0 12px 36px rgba(10,37,64,0.08); overflow: hidden;">
+
+      <!-- HERO with gradient + diagonal -->
+      <div style="position: relative;">
+        <div style="position:absolute; inset:0; clip-path: polygon(0 0, 100% 0, 100% 68%, 0 100%); background: linear-gradient(150deg,#d6f3ff 0%,#e7e4ff 15%,#c3b8ff 30%,#8d7bff 48%,#635bff 63%,#9b63ff 78%,#ff8ec7 100%);"></div>
+
+        <!-- NAV -->
+        <div style="position: relative; max-width: 1140px; margin: 0 auto; padding: 22px 40px; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display:flex; align-items:center; gap:38px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <svg width="30" height="30" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="11" fill="#0A2540"></rect><path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#fff"></path><circle cx="20" cy="26.4" r="2.5" fill="#635BFF"></circle></svg>
+              <span style="font-size:21px;font-weight:700;color:#0A2540;letter-spacing:-0.03em;">Agently</span>
+            </div>
+            <div style="display:flex; gap:26px; font-size:15px; font-weight:600; color:#0A2540;">
+              <span style="cursor:pointer;" style-hover="color:#635BFF;">Product</span>
+              <span style="cursor:pointer;" style-hover="color:#635BFF;">Solutions</span>
+              <span style="cursor:pointer;" style-hover="color:#635BFF;">Pricing</span>
+              <span style="cursor:pointer;" style-hover="color:#635BFF;">Resources</span>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:22px;">
+            <span style="font-size:15px;font-weight:600;color:#0A2540;cursor:pointer;">Sign in</span>
+            <button style="border:none; background:#0A2540; color:#fff; font-family:'Geist',sans-serif; font-size:15px; font-weight:600; padding:9px 18px; border-radius:8px; cursor:pointer; display:flex; align-items:center; gap:6px;" style-hover="background:#142f4d;">Start free <span style="font-size:16px;">→</span></button>
+          </div>
+        </div>
+
+        <!-- HERO CONTENT -->
+        <div style="position: relative; max-width: 1140px; margin: 0 auto; padding: 56px 40px 90px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div>
+            <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.7); border:1px solid rgba(10,37,64,0.08); padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600; color:#4B45C6; margin-bottom:24px;">
+              <span style="width:7px;height:7px;border-radius:50%;background:#635BFF;display:inline-block;"></span> Built by a 25-year insurance veteran
+            </div>
+            <h1 style="font-size:58px; line-height:1.02; font-weight:800; color:#0A2540; letter-spacing:-0.035em; margin:0 0 22px;">The CRM built for insurance agents.</h1>
+            <p style="font-size:19px; line-height:1.55; color:#1c3a5e; font-weight:450; margin:0 0 32px; max-width:480px;">Track every policy, automate renewals, follow up with AI, and run your own ad campaigns — all from one workspace. From your first lead to your thousandth policy.</p>
+            <div style="display:flex; gap:14px; align-items:center;">
+              <button style="border:none; background:#635BFF; color:#fff; font-family:'Geist',sans-serif; font-size:16px; font-weight:600; padding:13px 24px; border-radius:9px; cursor:pointer; display:flex; align-items:center; gap:7px; box-shadow:0 4px 14px rgba(99,91,255,0.35);" style-hover="background:#4B45C6;">Start free <span>→</span></button>
+              <button style="border:none; background:rgba(255,255,255,0.75); color:#0A2540; font-family:'Geist',sans-serif; font-size:16px; font-weight:600; padding:13px 22px; border-radius:9px; cursor:pointer;" style-hover="background:#fff;">Book a demo</button>
+            </div>
+            <div style="font-size:13.5px; color:#1c3a5e; margin-top:18px; opacity:0.85;">No credit card required · Free for your first 50 contacts</div>
+          </div>
+
+          <!-- PRODUCT MOCKUP -->
+          <sc-if value="{{ showProductMockup }}" hint-placeholder-val="{{ true }}">
+          <div style="position: relative; animation: ag-float 7s ease-in-out infinite;">
+            <div style="background:#fff; border-radius:14px; box-shadow:0 30px 60px rgba(10,37,64,0.28); overflow:hidden; border:1px solid rgba(255,255,255,0.6);">
+              <!-- app top bar -->
+              <div style="display:flex; align-items:center; gap:8px; padding:11px 14px; border-bottom:1px solid #eef1f5; background:#fbfcfe;">
+                <div style="display:flex; gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#e6ebf1;"></span><span style="width:10px;height:10px;border-radius:50%;background:#e6ebf1;"></span><span style="width:10px;height:10px;border-radius:50%;background:#e6ebf1;"></span></div>
+                <div style="margin-left:8px; font-family:'Geist Mono',monospace; font-size:11px; color:#8a94a6;">app.agently.com/pipeline</div>
+              </div>
+              <div style="display:grid; grid-template-columns: 52px 1fr;">
+                <!-- mini sidebar -->
+                <div style="background:#0A2540; padding:14px 0; display:flex; flex-direction:column; align-items:center; gap:18px;">
+                  <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="11" fill="#635BFF"></rect><path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#fff"></path></svg>
+                  <div style="width:22px;height:22px;border-radius:6px;background:#635BFF;"></div>
+                  <div style="width:22px;height:22px;border-radius:6px;background:rgba(255,255,255,0.12);"></div>
+                  <div style="width:22px;height:22px;border-radius:6px;background:rgba(255,255,255,0.12);"></div>
+                  <div style="width:22px;height:22px;border-radius:6px;background:rgba(255,255,255,0.12);"></div>
+                </div>
+                <!-- main -->
+                <div style="padding:16px;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                    <span style="font-size:14px; font-weight:700; color:#0A2540;">Pipeline</span>
+                    <span style="font-family:'Geist Mono',monospace; font-size:11px; color:#16a34a; background:#e9f9ef; padding:3px 8px; border-radius:6px; font-weight:600;">+18% this mo</span>
+                  </div>
+                  <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:8px;">
+                    <div>
+                      <div style="font-size:10px; font-weight:700; color:#8a94a6; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px;">New</div>
+                      <div style="background:#f6f9fc; border:1px solid #eef1f5; border-radius:8px; padding:9px; margin-bottom:7px;"><div style="font-size:11px;font-weight:600;color:#0A2540;">Dana R.</div><div style="font-size:10px;color:#8a94a6; margin-top:2px;">Auto · $1,240/yr</div></div>
+                      <div style="background:#f6f9fc; border:1px solid #eef1f5; border-radius:8px; padding:9px;"><div style="font-size:11px;font-weight:600;color:#0A2540;">Priya N.</div><div style="font-size:10px;color:#8a94a6; margin-top:2px;">Home · $2,010/yr</div></div>
+                    </div>
+                    <div>
+                      <div style="font-size:10px; font-weight:700; color:#8a94a6; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px;">Quoting</div>
+                      <div style="background:#eef0ff; border:1px solid #d9d6ff; border-radius:8px; padding:9px; margin-bottom:7px;"><div style="font-size:11px;font-weight:600;color:#0A2540;">Marcus T.</div><div style="font-size:10px;color:#635BFF; margin-top:2px; font-weight:600;">Life · $480/yr</div></div>
+                      <div style="background:#f6f9fc; border:1px solid #eef1f5; border-radius:8px; padding:9px;"><div style="font-size:11px;font-weight:600;color:#0A2540;">Bell Co.</div><div style="font-size:10px;color:#8a94a6; margin-top:2px;">Comm. · $7.4k/yr</div></div>
+                    </div>
+                    <div>
+                      <div style="font-size:10px; font-weight:700; color:#16a34a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px;">Bound</div>
+                      <div style="background:#e9f9ef; border:1px solid #c3ebd2; border-radius:8px; padding:9px; margin-bottom:7px;"><div style="font-size:11px;font-weight:600;color:#0A2540;">Owen K.</div><div style="font-size:10px;color:#16a34a; margin-top:2px; font-weight:600;">Auto · Bound ✓</div></div>
+                      <div style="background:#e9f9ef; border:1px solid #c3ebd2; border-radius:8px; padding:9px;"><div style="font-size:11px;font-weight:600;color:#0A2540;">Lena M.</div><div style="font-size:10px;color:#16a34a; margin-top:2px; font-weight:600;">Home · Bound ✓</div></div>
+                    </div>
+                  </div>
+                  <div style="margin-top:12px; background:#0A2540; border-radius:9px; padding:11px 13px; display:flex; align-items:center; justify-content:space-between;">
+                    <div><div style="font-size:10px; color:#8aa0bd;">Renewals due in 30 days</div><div style="font-size:15px; font-weight:700; color:#fff; font-family:'Geist Mono',monospace;">$48,210</div></div>
+                    <span style="font-size:11px; font-weight:600; color:#0A2540; background:#635BFF; color:#fff; padding:6px 11px; border-radius:7px;">Auto-renew on</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- floating notification -->
+            <div style="position:absolute; bottom:-20px; right:-18px; background:#fff; border-radius:11px; box-shadow:0 14px 30px rgba(10,37,64,0.18); padding:11px 14px; display:flex; align-items:center; gap:10px; border:1px solid #eef1f5; max-width:240px;">
+              <div style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#635BFF,#9b63ff);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;">✦</div>
+              <div><div style="font-size:11.5px; font-weight:700; color:#0A2540;">AI follow-up sent</div><div style="font-size:10.5px; color:#8a94a6;">to 12 lapsing policyholders</div></div>
+            </div>
+          </div>
+          </sc-if>
+        </div>
+      </div>
+
+      <!-- TRUST BAR -->
+      <div style="max-width:1140px; margin:0 auto; padding: 28px 40px 8px; text-align:center;">
+        <div style="font-size:13px; font-weight:600; letter-spacing:0.04em; color:#8a94a6; text-transform:uppercase; margin-bottom:20px;">Trusted by independent agents and growing agencies</div>
+        <div style="display:flex; justify-content:center; align-items:center; gap:44px; flex-wrap:wrap; opacity:0.55;">
+          <span style="font-size:20px; font-weight:800; color:#425466; letter-spacing:-0.02em;">Brightline</span>
+          <span style="font-size:20px; font-weight:700; color:#425466; font-style:italic;">Cornerstone</span>
+          <span style="font-size:20px; font-weight:800; color:#425466; letter-spacing:0.04em;">NORTHGATE</span>
+          <span style="font-size:20px; font-weight:700; color:#425466;">Harbor &amp; Co</span>
+          <span style="font-size:20px; font-weight:800; color:#425466; letter-spacing:-0.03em;">Vantage</span>
+        </div>
+      </div>
+
+      <!-- FEATURES BENTO -->
+      <div style="max-width:1140px; margin:0 auto; padding: 72px 40px;">
+        <div style="text-align:center; margin-bottom:48px;">
+          <div style="font-family:'Geist Mono',monospace; font-size:13px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#635BFF; margin-bottom:14px;">Everything in one place</div>
+          <h2 style="font-size:40px; font-weight:800; color:#0A2540; letter-spacing:-0.03em; margin:0 0 16px;">Run your whole book of business.</h2>
+          <p style="font-size:18px; color:#62708a; max-width:560px; margin:0 auto; line-height:1.55;">A complete toolkit designed around how agents actually work — built individually, designed to work together.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:18px;">
+          <!-- card 1 wide -->
+          <div style="grid-column: span 2; background:#f6f9fc; border:1px solid #eef1f5; border-radius:14px; padding:30px; display:flex; flex-direction:column; gap:14px;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#fff;border:1px solid #eef1f5;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(10,37,64,0.05);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#635BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="5" height="16" rx="1"></rect><rect x="9.5" y="4" width="5" height="11" rx="1"></rect><rect x="16" y="4" width="5" height="14" rx="1"></rect></svg>
+            </div>
+            <div>
+              <h3 style="font-size:19px; font-weight:700; color:#0A2540; margin:0 0 7px; letter-spacing:-0.01em;">Visual pipeline &amp; lead management</h3>
+              <p style="font-size:15px; color:#62708a; line-height:1.55; margin:0; max-width:440px;">Drag every prospect from new lead to bound policy. See exactly where your revenue is, by line, by stage, by month.</p>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div style="background:#0A2540; border-radius:14px; padding:30px; display:flex; flex-direction:column; gap:14px;">
+            <div style="width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9D8BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path></svg>
+            </div>
+            <div>
+              <h3 style="font-size:19px; font-weight:700; color:#fff; margin:0 0 7px; letter-spacing:-0.01em;">Policy tracking</h3>
+              <p style="font-size:15px; color:#8aa0bd; line-height:1.55; margin:0;">Every policy, carrier, and effective date in one record — across all lines.</p>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div style="background:#f6f9fc; border:1px solid #eef1f5; border-radius:14px; padding:30px; display:flex; flex-direction:column; gap:14px;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#fff;border:1px solid #eef1f5;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(10,37,64,0.05);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#635BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"></path><path d="M21 4v5h-5"></path></svg>
+            </div>
+            <div>
+              <h3 style="font-size:19px; font-weight:700; color:#0A2540; margin:0 0 7px; letter-spacing:-0.01em;">Automated renewals</h3>
+              <p style="font-size:15px; color:#62708a; line-height:1.55; margin:0;">Never miss a renewal. Automatic reminders to you and your clients, weeks ahead.</p>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div style="background:#f6f9fc; border:1px solid #eef1f5; border-radius:14px; padding:30px; display:flex; flex-direction:column; gap:14px;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#fff;border:1px solid #eef1f5;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(10,37,64,0.05);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#635BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"></line><path d="M17 6.5c0-2-2.2-3-5-3s-5 1-5 3.2c0 4.8 10 2.3 10 7.1 0 2.2-2.2 3.2-5 3.2s-5-1.1-5-3.2"></path></svg>
+            </div>
+            <div>
+              <h3 style="font-size:19px; font-weight:700; color:#0A2540; margin:0 0 7px; letter-spacing:-0.01em;">Commission tracking</h3>
+              <p style="font-size:15px; color:#62708a; line-height:1.55; margin:0;">Know what you've earned and what's coming, by carrier and by policy.</p>
+            </div>
+          </div>
+          <!-- card 5 wide gradient -->
+          <div style="background:linear-gradient(135deg,#635BFF 0%,#7c5cff 55%,#9b63ff 100%); border-radius:14px; padding:30px; display:flex; flex-direction:column; gap:14px;">
+            <div style="width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18.5 9l-3.7 3 1.2 4.8L12 14.4 8 16.8 9.2 12 5.5 9l4.7-1.4z"></path></svg>
+            </div>
+            <div>
+              <h3 style="font-size:19px; font-weight:700; color:#fff; margin:0 0 7px; letter-spacing:-0.01em;">AI follow-ups + built-in ad campaigns</h3>
+              <p style="font-size:15px; color:#e9e7ff; line-height:1.55; margin:0; max-width:440px;">Draft personalized follow-ups and launch lead-gen ads to Facebook and Google — without leaving Agently or hiring an agency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATS BAND (dark) -->
+      <div style="background:#0A2540; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-80px; right:-60px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle,rgba(99,91,255,0.55),transparent 68%);"></div>
+        <div style="position:relative; max-width:1140px; margin:0 auto; padding:64px 40px;">
+          <div style="text-align:center; margin-bottom:44px;">
+            <h2 style="font-size:34px; font-weight:800; color:#fff; letter-spacing:-0.03em; margin:0;">The backbone of your agency.</h2>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center;">
+            <div><div style="font-family:'Geist Mono',monospace; font-size:42px; font-weight:600; background:linear-gradient(120deg,#9D8BFF,#ff8ec7); -webkit-background-clip:text; background-clip:text; color:transparent; letter-spacing:-0.02em;">14h</div><div style="font-size:14px; color:#8aa0bd; margin-top:8px;">saved per agent each week</div></div>
+            <div><div style="font-family:'Geist Mono',monospace; font-size:42px; font-weight:600; background:linear-gradient(120deg,#9D8BFF,#ff8ec7); -webkit-background-clip:text; background-clip:text; color:transparent; letter-spacing:-0.02em;">31%</div><div style="font-size:14px; color:#8aa0bd; margin-top:8px;">higher renewal retention</div></div>
+            <div><div style="font-family:'Geist Mono',monospace; font-size:42px; font-weight:600; background:linear-gradient(120deg,#9D8BFF,#ff8ec7); -webkit-background-clip:text; background-clip:text; color:transparent; letter-spacing:-0.02em;">All lines</div><div style="font-size:14px; color:#8aa0bd; margin-top:8px;">P&amp;C, life, health, commercial</div></div>
+            <div><div style="font-family:'Geist Mono',monospace; font-size:42px; font-weight:600; background:linear-gradient(120deg,#9D8BFF,#ff8ec7); -webkit-background-clip:text; background-clip:text; color:transparent; letter-spacing:-0.02em;">10 min</div><div style="font-size:14px; color:#8aa0bd; margin-top:8px;">to import your whole book</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOUNDER / TESTIMONIAL -->
+      <div style="max-width:1140px; margin:0 auto; padding:72px 40px;">
+        <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap:48px; align-items:center;">
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <div style="width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#635BFF,#9b63ff);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;color:#fff;letter-spacing:-0.02em;">A</div>
+            <div style="font-family:'Geist Mono',monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#635BFF;">From the founder</div>
+            <div style="font-size:15px; color:#62708a; line-height:1.6;">25 years selling insurance. 12 years building CRMs and running digital ad campaigns. Agently is the tool I always wanted and never had.</div>
+          </div>
+          <div>
+            <p style="font-size:28px; line-height:1.4; font-weight:600; color:#0A2540; letter-spacing:-0.02em; margin:0;">"Most CRMs are built for software companies and bent to fit insurance. <span style="color:#635BFF;">Agently is built the other way around</span> — by someone who's worked the renewals, chased the leads, and run the ads."</p>
+            <div style="margin-top:24px; font-size:15px; color:#425466;"><strong style="color:#0A2540;">The Agently founder</strong> · 25 yrs in insurance, 12 building CRMs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICING -->
+      <div style="background:#f6f9fc; border-top:1px solid #eef1f5; border-bottom:1px solid #eef1f5;">
+        <div style="max-width:1140px; margin:0 auto; padding:72px 40px;">
+          <div style="text-align:center; margin-bottom:36px;">
+            <div style="font-family:'Geist Mono',monospace; font-size:13px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#635BFF; margin-bottom:14px;">Pricing</div>
+            <h2 style="font-size:40px; font-weight:800; color:#0A2540; letter-spacing:-0.03em; margin:0 0 24px;">Simple plans that grow with you.</h2>
+            <!-- toggle -->
+            <div style="display:inline-flex; position:relative; background:#e6ebf1; border-radius:10px; padding:3px; width:240px;">
+              <div style="position:absolute; top:3px; left:{{ knobLeft }}; width:calc(50% - 3px); height:calc(100% - 6px); background:#fff; border-radius:8px; box-shadow:0 1px 3px rgba(10,37,64,0.12); transition:left 0.25s cubic-bezier(0.2,0,0,1);"></div>
+              <button onClick="{{ setMonthly }}" style="position:relative; flex:1; border:none; background:transparent; font-family:'Geist',sans-serif; font-size:14px; font-weight:600; padding:9px 0; cursor:pointer; color:{{ monthlyColor }};">Monthly</button>
+              <button onClick="{{ setAnnual }}" style="position:relative; flex:1; border:none; background:transparent; font-family:'Geist',sans-serif; font-size:14px; font-weight:600; padding:9px 0; cursor:pointer; color:{{ annualColor }};">Annual <span style="font-size:11px; color:#16a34a;">−15%</span></button>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; align-items:stretch;">
+            <!-- Solo -->
+            <div style="background:#fff; border:1px solid #e6ebf1; border-radius:14px; padding:30px; display:flex; flex-direction:column;">
+              <div style="font-size:16px; font-weight:700; color:#0A2540;">Solo</div>
+              <div style="font-size:14px; color:#62708a; margin:6px 0 22px;">For independent agents.</div>
+              <div style="display:flex; align-items:baseline; gap:4px;"><span style="font-size:44px; font-weight:800; color:#0A2540; letter-spacing:-0.03em; font-family:'Geist Mono',monospace;">${{ soloPrice }}</span><span style="font-size:14px; color:#8a94a6;">/mo</span></div>
+              <button style="margin:24px 0; border:1px solid #d9d6ff; background:#fff; color:#635BFF; font-family:'Geist',sans-serif; font-size:15px; font-weight:600; padding:11px 0; border-radius:9px; cursor:pointer;" style-hover="background:#f3f2ff;">Start free</button>
+              <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:#425466;">
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Visual pipeline &amp; contacts</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Policy &amp; renewal tracking</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Up to 500 contacts</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Email follow-ups</div>
+              </div>
+            </div>
+            <!-- Agency (highlight) -->
+            <div style="background:#fff; border:2px solid #635BFF; border-radius:14px; padding:30px; display:flex; flex-direction:column; position:relative; box-shadow:0 16px 40px rgba(99,91,255,0.18);">
+              <div style="position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#635BFF; color:#fff; font-size:12px; font-weight:700; padding:5px 13px; border-radius:999px; letter-spacing:0.02em;">Most popular</div>
+              <div style="font-size:16px; font-weight:700; color:#0A2540;">Agency</div>
+              <div style="font-size:14px; color:#62708a; margin:6px 0 22px;">For teams of 2–20 agents.</div>
+              <div style="display:flex; align-items:baseline; gap:4px;"><span style="font-size:44px; font-weight:800; color:#0A2540; letter-spacing:-0.03em; font-family:'Geist Mono',monospace;">${{ agencyPrice }}</span><span style="font-size:14px; color:#8a94a6;">/mo per seat</span></div>
+              <button style="margin:24px 0; border:none; background:#635BFF; color:#fff; font-family:'Geist',sans-serif; font-size:15px; font-weight:600; padding:11px 0; border-radius:9px; cursor:pointer; box-shadow:0 4px 14px rgba(99,91,255,0.32);" style-hover="background:#4B45C6;">Start free</button>
+              <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:#425466;">
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Everything in Solo</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Unlimited contacts</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> AI follow-ups (SMS + email)</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Commission tracking</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Built-in ad campaigns</div>
+              </div>
+            </div>
+            <!-- Brokerage -->
+            <div style="background:#fff; border:1px solid #e6ebf1; border-radius:14px; padding:30px; display:flex; flex-direction:column;">
+              <div style="font-size:16px; font-weight:700; color:#0A2540;">Brokerage</div>
+              <div style="font-size:14px; color:#62708a; margin:6px 0 22px;">For larger operations.</div>
+              <div style="display:flex; align-items:baseline; gap:4px;"><span style="font-size:44px; font-weight:800; color:#0A2540; letter-spacing:-0.03em; font-family:'Geist Mono',monospace;">${{ brokeragePrice }}</span><span style="font-size:14px; color:#8a94a6;">/mo per seat</span></div>
+              <button style="margin:24px 0; border:1px solid #d9d6ff; background:#fff; color:#635BFF; font-family:'Geist',sans-serif; font-size:15px; font-weight:600; padding:11px 0; border-radius:9px; cursor:pointer;" style-hover="background:#f3f2ff;">Contact sales</button>
+              <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:#425466;">
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Everything in Agency</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Roles &amp; permissions</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Carrier API integrations</div>
+                <div style="display:flex; gap:9px;"><span style="color:#635BFF;">✓</span> Dedicated onboarding</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA BAND -->
+      <div style="position:relative; overflow:hidden; background:linear-gradient(135deg,#4B45C6 0%,#635BFF 45%,#9b63ff 100%);">
+        <div style="position:absolute; bottom:-120px; left:-40px; width:360px; height:360px; border-radius:50%; background:radial-gradient(circle,rgba(255,142,199,0.45),transparent 65%);"></div>
+        <div style="position:relative; max-width:1140px; margin:0 auto; padding:72px 40px; text-align:center;">
+          <h2 style="font-size:42px; font-weight:800; color:#fff; letter-spacing:-0.03em; margin:0 0 16px;">Ready to grow your book?</h2>
+          <p style="font-size:18px; color:#e9e7ff; margin:0 0 30px;">Import your contacts and run your first renewal campaign in under ten minutes.</p>
+          <div style="display:flex; gap:14px; justify-content:center;">
+            <button style="border:none; background:#fff; color:#4B45C6; font-family:'Geist',sans-serif; font-size:16px; font-weight:700; padding:14px 26px; border-radius:9px; cursor:pointer;" style-hover="background:#f3f2ff;">Start free</button>
+            <button style="border:1px solid rgba(255,255,255,0.5); background:transparent; color:#fff; font-family:'Geist',sans-serif; font-size:16px; font-weight:600; padding:14px 24px; border-radius:9px; cursor:pointer;" style-hover="background:rgba(255,255,255,0.12);">Book a demo</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div style="background:#0A2540; padding:56px 40px 40px;">
+        <div style="max-width:1140px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+              <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="11" fill="#635BFF"></rect><path d="M20 8.5 L30 31 L25.2 31 L20 18.6 L14.8 31 L10 31 Z" fill="#fff"></path><circle cx="20" cy="26.4" r="2.5" fill="#fff"></circle></svg>
+              <span style="font-size:19px; font-weight:700; color:#fff; letter-spacing:-0.03em;">Agently</span>
+            </div>
+            <div style="font-size:14px; color:#8aa0bd; line-height:1.6; max-width:240px;">The CRM built for insurance agents. From your first lead to your thousandth policy.</div>
+          </div>
+          <div>
+            <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#8aa0bd; margin-bottom:16px;">Product</div>
+            <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:#c3d0e0;"><span>Pipeline</span><span>Policies</span><span>Renewals</span><span>Ad campaigns</span></div>
+          </div>
+          <div>
+            <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#8aa0bd; margin-bottom:16px;">Solutions</div>
+            <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:#c3d0e0;"><span>Solo agents</span><span>Agencies</span><span>Brokerages</span><span>All lines</span></div>
+          </div>
+          <div>
+            <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#8aa0bd; margin-bottom:16px;">Company</div>
+            <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:#c3d0e0;"><span>About</span><span>Pricing</span><span>Contact</span><span>Privacy</span></div>
+          </div>
+        </div>
+        <div style="max-width:1140px; margin:36px auto 0; padding-top:24px; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center; font-size:13px; color:#8aa0bd;">
+          <span>© 2026 Agently. All rights reserved.</span>
+          <span style="font-family:'Geist Mono',monospace;">Made for agents, by an agent.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 3. FACEBOOK PAGE ============ -->
+  <section>
+    <div style="font-family:'Geist Mono',monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #635BFF; margin-bottom: 14px;">03 — Facebook Business Page</div>
+    <div style="background:#fff; border-radius:16px; box-shadow:0 1px 2px rgba(10,37,64,0.06), 0 12px 36px rgba(10,37,64,0.08); overflow:hidden;">
+      <!-- browser chrome -->
+      <div style="background:#e9ecf1; padding:11px 16px; display:flex; align-items:center; gap:12px; border-bottom:1px solid #dfe3ea;">
+        <div style="display:flex; gap:7px;"><span style="width:11px;height:11px;border-radius:50%;background:#ff5f57;"></span><span style="width:11px;height:11px;border-radius:50%;background:#febc2e;"></span><span style="width:11px;height:11px;border-radius:50%;background:#28c840;"></span></div>
+        <div style="flex:1; background:#fff; border-radius:7px; padding:6px 14px; font-size:12.5px; color:#65676b; font-family:'Geist Mono',monospace;">facebook.com/AgentlyCRM</div>
+      </div>
+      <!-- FB content -->
+      <div style="background:#f0f2f5; padding:0 0 28px;">
+        <!-- cover -->
+        <div style="position:relative; height:240px; background:linear-gradient(120deg,#4B45C6 0%,#635BFF 38%,#9b63ff 70%,#ff8ec7 110%); overflow:hidden;">
+          <div style="position:absolute; right:48px; top:50%; transform:translateY(-50%); text-align:right;">
+            <div style="font-size:34px; font-weight:800; color:#fff; letter-spacing:-0.03em; line-height:1.1;">The CRM built for<br>insurance agents.</div>
+            <div style="font-size:15px; color:rgba(255,255,255,0.9); margin-top:10px; font-family:'Geist Mono',monospace;">app.agently.com</div>
+          </div>
+          <div style="position:absolute; left:-40px; bottom:-60px; width:240px; height:240px; border-radius:50%; background:rgba(255,255,255,0.08);"></div>
+        </div>
+        <!-- profile header -->
+        <div style="background:#fff; padding:0 36px 0; border-bottom:1px solid #dfe3ea;">
+          <div style="max-width:1000px; margin:0 auto; display:flex; align-items:flex-end; gap:20px; padding-top:0; position:relative;">
+            <div style="margin-top:-44px; width:132px; height:132px; border-radius:50%; background:#fff; padding:5px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+              <div style="width:100%; height:100%; border-radius:50%; background:linear-gradient(135deg,#9D8BFF,#635BFF,#4B45C6); display:flex; align-items:center; justify-content:center;">
+                <svg width="64" height="64" viewBox="0 0 40 40" fill="none"><path d="M20 9 L30 31 L25.2 31 L20 19 L14.8 31 L10 31 Z" fill="#fff"></path><circle cx="20" cy="26.6" r="2.6" fill="#fff"></circle></svg>
+              </div>
+            </div>
+            <div style="flex:1; padding:18px 0;">
+              <div style="font-size:30px; font-weight:800; color:#050505; letter-spacing:-0.02em;">Agently</div>
+              <div style="font-size:15px; color:#65676b; margin-top:3px;">Software company · CRM for insurance agents</div>
+              <div style="font-size:14px; color:#65676b; margin-top:6px;"><strong style="color:#050505;">2,418</strong> followers · <strong style="color:#050505;">1,902</strong> likes</div>
+            </div>
+            <div style="display:flex; gap:9px; padding-bottom:18px;">
+              <button style="border:none; background:#1877F2; color:#fff; font-family:'Geist',sans-serif; font-size:15px; font-weight:600; padding:9px 18px; border-radius:7px; cursor:pointer; display:flex; align-items:center; gap:7px;">👍 Like</button>
+              <button style="border:none; background:#1877F2; color:#fff; font-family:'Geist',sans-serif; font-size:15px; font-weight:600; padding:9px 18px; border-radius:7px; cursor:pointer;">Follow</button>
+              <button style="border:none; background:#e4e6eb; color:#050505; font-family:'Geist',sans-serif; font-size:15px; font-weight:600; padding:9px 18px; border-radius:7px; cursor:pointer;">Message</button>
+            </div>
+          </div>
+          <!-- tabs -->
+          <div style="max-width:1000px; margin:0 auto; display:flex; gap:6px; padding-top:6px;">
+            <div style="padding:14px 16px; font-size:15px; font-weight:600; color:#1877F2; border-bottom:3px solid #1877F2;">Posts</div>
+            <div style="padding:14px 16px; font-size:15px; font-weight:500; color:#65676b;">About</div>
+            <div style="padding:14px 16px; font-size:15px; font-weight:500; color:#65676b;">Reviews</div>
+            <div style="padding:14px 16px; font-size:15px; font-weight:500; color:#65676b;">Photos</div>
+            <div style="padding:14px 16px; font-size:15px; font-weight:500; color:#65676b;">More</div>
+          </div>
+        </div>
+        <!-- body grid -->
+        <div style="max-width:1000px; margin:20px auto 0; padding:0 36px; display:grid; grid-template-columns:380px 1fr; gap:18px; align-items:start;">
+          <!-- left column -->
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="background:#fff; border-radius:10px; padding:18px; box-shadow:0 1px 2px rgba(0,0,0,0.08);">
+              <div style="font-size:19px; font-weight:700; color:#050505; margin-bottom:12px;">Intro</div>
+              <div style="font-size:15px; color:#050505; line-height:1.5; text-align:center; padding-bottom:14px;">Track policies, automate renewals, and grow your book — built by a 25-year insurance veteran.</div>
+              <div style="display:flex; flex-direction:column; gap:13px; font-size:14px; color:#65676b; border-top:1px solid #eceef1; padding-top:14px;">
+                <div style="display:flex; gap:11px; align-items:center;">🌐 <span style="color:#1877F2;">app.agently.com</span></div>
+                <div style="display:flex; gap:11px; align-items:center;">✉️ hello@agently.com</div>
+                <div style="display:flex; gap:11px; align-items:center;">⭐ 4.9 · Based on 126 reviews</div>
+              </div>
+            </div>
+            <div style="background:#fff; border-radius:10px; padding:18px; box-shadow:0 1px 2px rgba(0,0,0,0.08);">
+              <div style="font-size:19px; font-weight:700; color:#050505; margin-bottom:12px;">Photos</div>
+              <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:5px;">
+                <div style="aspect-ratio:1; border-radius:8px; background:linear-gradient(135deg,#635BFF,#9b63ff);"></div>
+                <div style="aspect-ratio:1; border-radius:8px; background:linear-gradient(135deg,#0A2540,#425466);"></div>
+                <div style="aspect-ratio:1; border-radius:8px; background:linear-gradient(135deg,#9b63ff,#ff8ec7);"></div>
+                <div style="aspect-ratio:1; border-radius:8px; background:linear-gradient(135deg,#d6f3ff,#8d7bff);"></div>
+                <div style="aspect-ratio:1; border-radius:8px; background:linear-gradient(135deg,#635BFF,#4B45C6);"></div>
+                <div style="aspect-ratio:1; border-radius:8px; background:linear-gradient(135deg,#ff8ec7,#9b63ff);"></div>
+              </div>
+            </div>
+          </div>
+          <!-- right column: posts -->
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <!-- post 1 -->
+            <div style="background:#fff; border-radius:10px; box-shadow:0 1px 2px rgba(0,0,0,0.08); overflow:hidden;">
+              <div style="padding:16px 16px 12px; display:flex; align-items:center; gap:11px;">
+                <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#9D8BFF,#635BFF);display:flex;align-items:center;justify-content:center;">
+                  <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><path d="M20 9 L30 31 L25.2 31 L20 19 L14.8 31 L10 31 Z" fill="#fff"></path><circle cx="20" cy="26.6" r="2.6" fill="#fff"></circle></svg>
+                </div>
+                <div><div style="font-size:15px; font-weight:700; color:#050505;">Agently</div><div style="font-size:13px; color:#65676b;">3d · 🌐</div></div>
+              </div>
+              <div style="padding:0 16px 14px; font-size:15px; color:#050505; line-height:1.5;">Renewal season doesn't have to be chaos. Agently flags every policy coming due 30, 60, and 90 days out — and drafts the outreach for you. 🗓️</div>
+              <div style="height:280px; background:linear-gradient(120deg,#4B45C6,#635BFF 50%,#9b63ff); display:flex; align-items:center; justify-content:center; position:relative;">
+                <div style="background:rgba(255,255,255,0.95); border-radius:12px; padding:20px 24px; box-shadow:0 12px 30px rgba(0,0,0,0.2);">
+                  <div style="font-size:12px; color:#8a94a6; font-family:'Geist Mono',monospace; text-transform:uppercase; letter-spacing:0.06em;">Renewals due · 30 days</div>
+                  <div style="font-size:32px; font-weight:800; color:#0A2540; font-family:'Geist Mono',monospace; margin-top:6px;">$48,210</div>
+                  <div style="font-size:13px; color:#16a34a; font-weight:600; margin-top:4px;">12 policies · auto-reminders on ✓</div>
+                </div>
+              </div>
+              <div style="padding:11px 16px; display:flex; justify-content:space-between; font-size:13.5px; color:#65676b; border-bottom:1px solid #eceef1;"><span>👍❤️ 184</span><span>26 comments · 9 shares</span></div>
+              <div style="padding:6px 16px; display:flex; justify-content:space-around; font-size:14px; font-weight:600; color:#65676b;"><span style="padding:8px;">👍 Like</span><span style="padding:8px;">💬 Comment</span><span style="padding:8px;">↗ Share</span></div>
+            </div>
+            <!-- post 2 -->
+            <div style="background:#fff; border-radius:10px; box-shadow:0 1px 2px rgba(0,0,0,0.08); overflow:hidden;">
+              <div style="padding:16px 16px 12px; display:flex; align-items:center; gap:11px;">
+                <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#9D8BFF,#635BFF);display:flex;align-items:center;justify-content:center;">
+                  <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><path d="M20 9 L30 31 L25.2 31 L20 19 L14.8 31 L10 31 Z" fill="#fff"></path><circle cx="20" cy="26.6" r="2.6" fill="#fff"></circle></svg>
+                </div>
+                <div><div style="font-size:15px; font-weight:700; color:#050505;">Agently</div><div style="font-size:13px; color:#65676b;">1w · 🌐</div></div>
+              </div>
+              <div style="padding:0 16px 14px; font-size:15px; color:#050505; line-height:1.5;">New: launch Facebook &amp; Google lead-gen ads straight from your CRM. No agency, no second login. Built in by someone who's run ad campaigns for 12 years. 🚀</div>
+              <div style="margin:0 16px 14px; border:1px solid #e4e6eb; border-radius:10px; overflow:hidden;">
+                <div style="height:150px; background:linear-gradient(135deg,#0A2540,#1c3a5e);"></div>
+                <div style="padding:12px 14px; background:#f7f8fa;">
+                  <div style="font-size:12px; color:#65676b; text-transform:uppercase; font-family:'Geist Mono',monospace;">app.agently.com</div>
+                  <div style="font-size:16px; font-weight:700; color:#050505; margin-top:3px;">Run lead-gen ads from your CRM</div>
+                  <div style="font-size:14px; color:#65676b; margin-top:2px;">Launch, track, and route new leads into your pipeline automatically.</div>
+                </div>
+              </div>
+              <div style="padding:11px 16px; display:flex; justify-content:space-between; font-size:13.5px; color:#65676b; border-bottom:1px solid #eceef1;"><span>👍❤️ 312</span><span>54 comments · 22 shares</span></div>
+              <div style="padding:6px 16px; display:flex; justify-content:space-around; font-size:14px; font-weight:600; color:#65676b;"><span style="padding:8px;">👍 Like</span><span style="padding:8px;">💬 Comment</span><span style="padding:8px;">↗ Share</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1328, &quot;height&quot;: 900}, &quot;showProductMockup&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}, &quot;defaultBilling&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;monthly&quot;, &quot;annual&quot;], &quot;default&quot;: &quot;annual&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { billing: (props && props.defaultBilling) || 'annual' };
+  }
+  renderVals() {
+    const annual = this.state.billing === 'annual';
+    return {
+      showProductMockup: this.props.showProductMockup ?? true,
+      setAnnual: () => this.setState({ billing: 'annual' }),
+      setMonthly: () => this.setState({ billing: 'monthly' }),
+      knobLeft: annual ? 'calc(50% + 0px)' : '3px',
+      annualColor: annual ? '#0A2540' : '#8a94a6',
+      monthlyColor: annual ? '#8a94a6' : '#0A2540',
+      soloPrice: annual ? '24' : '29',
+      agencyPrice: annual ? '59' : '69',
+      brokeragePrice: annual ? '129' : '149',
+    };
+  }
+}
+</script>
+</body>
+</html>
