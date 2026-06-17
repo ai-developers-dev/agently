@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GradientDefs } from "@/components/brand/gradient-defs";
+import { SiteHeader } from "@/components/site/site-header";
+import { SiteFooter } from "@/components/site/site-footer";
+import { siteConfig } from "@/lib/config";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -14,9 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Agently — CRM for Insurance Agents",
-  description:
-    "Track every policy, automate renewals, follow up with AI, and run your own ad campaigns — all from one workspace. Built by a 25-year insurance veteran.",
+  title: {
+    default: "Agently — CRM for Insurance Agents",
+    template: "%s — Agently",
+  },
+  description: siteConfig.description,
 };
 
 export default function RootLayout({
@@ -24,8 +29,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
-      <body className="font-sans antialiased">
-        {children}
+      <body className="flex min-h-screen flex-col bg-white font-sans antialiased">
+        <SiteHeader />
+        <main className="flex-1">{children}</main>
+        <SiteFooter />
         <GradientDefs />
       </body>
     </html>
