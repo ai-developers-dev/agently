@@ -29,10 +29,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
-      <body className="relative flex min-h-screen flex-col bg-white font-sans antialiased">
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+      <body className="bg-[#eceff3] font-sans antialiased">
+        {/* Page shell — caps the whole site (bands included) at the design's
+            1280px card width; inner content stays at 1140 via <Container>. */}
+        <div className="relative mx-auto flex min-h-screen w-full max-w-[1280px] flex-col bg-white shadow-[0_0_80px_rgba(10,37,64,0.07)]">
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+        </div>
         <GradientDefs />
       </body>
     </html>
