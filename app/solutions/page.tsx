@@ -55,7 +55,7 @@ export default function SolutionsPage() {
         adapts to your book — across every line of business.
       </PageHeader>
 
-      <section className="py-16 sm:py-20">
+      <section className="py-16 sm:py-[72px]">
         <Container>
           <div className="grid gap-5 md:grid-cols-2">
             {SEGMENTS.map((s) => (

@@ -40,7 +40,7 @@ export function PipelineVisual() {
     { m: "Jun", h: 88 },
   ];
   return (
-    <Frame url="app.agently.net/pipeline">
+    <Frame url="app.agently.com/pipeline">
       <div className="mb-3 flex items-center justify-between">
         <span className="text-sm font-bold text-ink">Revenue forecast</span>
         <span className="rounded-md bg-[#e9f9ef] px-2 py-[3px] font-mono text-[11px] font-semibold text-[#16a34a]">
@@ -87,7 +87,7 @@ export function PolicyVisual() {
     { line: "Life", carrier: "Lincoln", premium: "$480/yr" },
   ];
   return (
-    <Frame url="app.agently.net/clients/rivera">
+    <Frame url="app.agently.com/clients/rivera">
       <div className="mb-3 flex items-center gap-2.5">
         <div className="flex size-9 items-center justify-center rounded-full bg-[linear-gradient(135deg,#635BFF,#9b63ff)] text-sm font-bold text-white">
           D
@@ -124,7 +124,7 @@ export function RenewalVisual() {
     { name: "Lena M.", days: "in 41 days", tone: "ok" },
   ];
   return (
-    <Frame url="app.agently.net/renewals">
+    <Frame url="app.agently.com/renewals">
       <div className="mb-3 flex items-center justify-between">
         <span className="text-sm font-bold text-ink">Upcoming renewals</span>
         <span className="rounded-md bg-[#eef0ff] px-2 py-[3px] text-[10px] font-semibold text-brand">
@@ -161,7 +161,7 @@ export function CommissionVisual() {
     { carrier: "Lincoln", amt: "$1,260", paid: false },
   ];
   return (
-    <Frame url="app.agently.net/commissions">
+    <Frame url="app.agently.com/commissions">
       <div className="mb-3 grid grid-cols-2 gap-2.5">
         <div className="rounded-lg bg-[#e9f9ef] p-3">
           <div className="text-[10px] text-[#16a34a]">Paid this month</div>
@@ -200,7 +200,7 @@ export function CommissionVisual() {
 /* ── Campaigns: ad preview + metrics ── */
 export function CampaignVisual() {
   return (
-    <Frame url="app.agently.net/campaigns">
+    <Frame url="app.agently.com/campaigns">
       <div className="overflow-hidden rounded-lg border border-[#eef1f5]">
         <div className="flex items-center gap-2 px-3 py-2">
           <div className="flex size-6 items-center justify-center rounded-full bg-ink">
@@ -213,7 +213,7 @@ export function CampaignVisual() {
           <div className="text-[11px] font-bold text-ink">
             Lower your insurance in 10 minutes
           </div>
-          <div className="text-[9px] text-[#8a94a6]">agently.net · Get a quote</div>
+          <div className="text-[9px] text-[#8a94a6]">agently.com · Get a quote</div>
         </div>
       </div>
       <div className="mt-3 grid grid-cols-3 gap-2 text-center">

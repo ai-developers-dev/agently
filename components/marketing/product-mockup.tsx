@@ -16,7 +16,7 @@ export function ProductMockup() {
             <span className="size-2.5 rounded-full bg-[#e6ebf1]" />
           </div>
           <div className="ml-2 font-mono text-[11px] text-[#8a94a6]">
-            app.agently.net/pipeline
+            app.agently.com/pipeline
           </div>
         </div>
 

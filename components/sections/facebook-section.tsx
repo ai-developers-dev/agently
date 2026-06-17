@@ -43,7 +43,7 @@ export function FacebookSection() {
                 insurance agents.
               </div>
               <div className="mt-2.5 font-mono text-[15px] text-white/90">
-                app.agently.net
+                app.agently.com
               </div>
             </div>
             <div className="absolute -bottom-[60px] -left-10 size-60 rounded-full bg-white/[0.08]" />
@@ -112,10 +112,10 @@ export function FacebookSection() {
                 </div>
                 <div className="flex flex-col gap-[13px] border-t border-[#eceef1] pt-3.5 text-sm text-[#65676b]">
                   <div className="flex items-center gap-[11px]">
-                    🌐 <span className="text-[#1877F2]">app.agently.net</span>
+                    🌐 <span className="text-[#1877F2]">app.agently.com</span>
                   </div>
                   <div className="flex items-center gap-[11px]">
-                    ✉️ hello@agently.net
+                    ✉️ hello@agently.com
                   </div>
                   <div className="flex items-center gap-[11px]">
                     ⭐ 4.9 · Based on 126 reviews
@@ -177,7 +177,7 @@ export function FacebookSection() {
                   <div className="h-[150px] bg-[linear-gradient(135deg,#0A2540,#1c3a5e)]" />
                   <div className="bg-[#f7f8fa] px-3.5 py-3">
                     <div className="font-mono text-xs uppercase text-[#65676b]">
-                      app.agently.net
+                      app.agently.com
                     </div>
                     <div className="mt-[3px] text-base font-bold text-[#050505]">
                       Run lead-gen ads from your CRM

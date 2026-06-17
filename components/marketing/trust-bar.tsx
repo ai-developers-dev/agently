@@ -10,8 +10,8 @@ const TRUST = [
 
 export function TrustBar() {
   return (
-    <Container className="py-12 text-center">
-      <div className="mb-6 text-[13px] font-semibold uppercase tracking-[0.04em] text-[#8a94a6]">
+    <Container className="px-5 pb-2 pt-7 text-center sm:px-10">
+      <div className="mb-5 text-[13px] font-semibold uppercase tracking-[0.04em] text-[#8a94a6]">
         Trusted by independent agents and growing agencies
       </div>
       <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-55 sm:gap-x-11">

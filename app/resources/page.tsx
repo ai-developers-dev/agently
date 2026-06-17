@@ -65,7 +65,7 @@ export default function ResourcesPage() {
         Guides, playbooks, and walkthroughs from agents and the Agently team.
       </PageHeader>
 
-      <section className="py-16 sm:py-20">
+      <section className="py-16 sm:py-[72px]">
         <Container>
           {/* Featured */}
           <Link

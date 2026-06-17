@@ -25,10 +25,10 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Company",
     links: [
+      { label: "About", href: "/" },
       { label: "Pricing", href: "/pricing" },
-      { label: "Resources", href: "/resources" },
-      { label: "Book a demo", href: "/book-a-demo" },
       { label: "Contact", href: "/contact" },
+      { label: "Privacy", href: "#" },
     ],
   },
 ];
@@ -36,8 +36,8 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
 export function SiteFooter() {
   return (
     <footer className="bg-ink">
-      <Container className="py-14">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
+      <Container className="pb-10 pt-14">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="col-span-2 md:col-span-1">
             <Link
               href="/"
@@ -75,7 +75,7 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 text-[13px] text-[#8aa0bd] sm:flex-row sm:items-center">
+        <div className="mt-9 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 text-[13px] text-[#8aa0bd] sm:flex-row sm:items-center">
           <span>
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </span>

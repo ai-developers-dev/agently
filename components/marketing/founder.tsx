@@ -2,7 +2,7 @@ import { Container } from "@/components/site/container";
 
 export function Founder() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24">
+    <section className="py-16 sm:py-[72px]">
       <Container>
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
           <div className="flex flex-col gap-5">

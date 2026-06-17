@@ -13,13 +13,16 @@ export type NavItem = { label: string; href: string };
 
 export const siteConfig = {
   name: "Agently",
-  domain: "agently.net",
+  domain: "agently.com",
   description:
     "The CRM built for insurance agents. Track every policy, automate renewals, follow up with AI, and run your own ad campaigns — all from one workspace.",
   tagline: "The CRM built for insurance agents.",
 
   /** External app (the actual product login). */
-  appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "https://app.agently.net",
+  appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "https://app.agently.com",
+
+  /** Support / contact email shown across the site. */
+  supportEmail: "hello@agently.com",
 
   /** GHL calendar embed URL used on /book-a-demo. Empty → form fallback. */
   calendarUrl: process.env.NEXT_PUBLIC_GHL_CALENDAR_URL ?? "",

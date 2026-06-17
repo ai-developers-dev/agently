@@ -79,7 +79,7 @@ export function PricingTable({ showHeading = true }: { showHeading?: boolean }) 
 
   return (
     <section className="border-y border-[#eef1f5] bg-mist">
-      <Container className="py-16 sm:py-20 lg:py-24">
+      <Container className="py-16 sm:py-[72px]">
         <div className="mb-9 text-center">
           {showHeading && (
             <>

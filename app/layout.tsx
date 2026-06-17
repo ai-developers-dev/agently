@@ -29,7 +29,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
-      <body className="flex min-h-screen flex-col bg-white font-sans antialiased">
+      <body className="relative flex min-h-screen flex-col bg-white font-sans antialiased">
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />

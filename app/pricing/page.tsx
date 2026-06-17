@@ -42,7 +42,7 @@ export default function PricingPage() {
 
       <PricingTable showHeading={false} />
 
-      <section className="py-16 sm:py-20">
+      <section className="py-16 sm:py-[72px]">
         <Container className="max-w-[760px]">
           <h2 className="mb-10 text-center text-[26px] font-extrabold tracking-[-0.03em] text-ink sm:text-[32px]">
             Frequently asked questions

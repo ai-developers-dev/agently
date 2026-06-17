@@ -31,7 +31,7 @@ export default function BookADemoPage() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,#f3f1ff_0%,#ffffff_55%)]" />
-      <Container className="py-16 sm:py-20">
+      <Container className="py-16 sm:py-[72px]">
         <div className="grid items-start gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
             <div className="mb-3.5 font-mono text-[13px] font-semibold uppercase tracking-[0.1em] text-brand">

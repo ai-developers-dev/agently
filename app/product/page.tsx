@@ -112,7 +112,7 @@ export default function ProductPage() {
       </PageHeader>
 
       {/* Hero mockup */}
-      <section className="border-b border-[#eef1f5] bg-mist py-16 sm:py-20">
+      <section className="border-b border-[#eef1f5] bg-mist py-16 sm:py-[72px]">
         <Container>
           <div className="mx-auto w-full max-w-[560px]">
             <ProductMockup />

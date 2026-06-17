@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -20,7 +21,7 @@ export function SiteHeader() {
     setOpen(false);
   }, [pathname]);
 
-  // Subtle border/shadow once the page is scrolled.
+  // Subtle border/shadow once the page is scrolled (solid header only).
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
@@ -39,36 +40,44 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 bg-white/80 backdrop-blur-md transition-shadow",
-        scrolled && "shadow-[0_1px_0_rgba(10,37,64,0.08)]",
+        "z-50",
+        isHome
+          ? // Home: transparent nav floating over the hero gradient.
+            "absolute inset-x-0 top-0"
+          : // Interior: solid sticky white bar.
+            cn(
+              "sticky top-0 bg-white/80 backdrop-blur-md transition-shadow",
+              scrolled && "shadow-[0_1px_0_rgba(10,37,64,0.08)]",
+            ),
       )}
     >
       <Container>
-        <div className="flex h-16 items-center justify-between gap-6">
-          <BrandLogo />
+        <div className="flex items-center justify-between gap-6 py-[18px] sm:py-[22px]">
+          {/* Left: logo + nav links */}
+          <div className="flex items-center gap-[38px]">
+            <BrandLogo tone="nav" />
+            <nav className="hidden items-center gap-[26px] md:flex">
+              {siteConfig.nav.map((item) => {
+                const active =
+                  pathname === item.href || pathname.startsWith(item.href + "/");
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      "text-[15px] font-semibold transition-colors hover:text-brand",
+                      active ? "text-brand" : "text-ink",
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
 
-          {/* Desktop nav */}
-          <nav className="hidden items-center gap-7 md:flex">
-            {siteConfig.nav.map((item) => {
-              const active =
-                pathname === item.href || pathname.startsWith(item.href + "/");
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "text-[15px] font-semibold transition-colors hover:text-brand",
-                    active ? "text-brand" : "text-ink",
-                  )}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Desktop actions */}
-          <div className="hidden items-center gap-5 md:flex">
+          {/* Right: sign in + CTA */}
+          <div className="hidden items-center gap-[22px] md:flex">
             <a
               href={siteConfig.appUrl}
               className="text-[15px] font-semibold text-ink transition-colors hover:text-brand"

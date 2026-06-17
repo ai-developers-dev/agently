@@ -9,10 +9,10 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* Diagonal gradient wash */}
-      <div className="absolute inset-0 [clip-path:polygon(0_0,100%_0,100%_72%,0_100%)] bg-[linear-gradient(150deg,#d6f3ff_0%,#e7e4ff_15%,#c3b8ff_30%,#8d7bff_48%,#635bff_63%,#9b63ff_78%,#ff8ec7_100%)] sm:[clip-path:polygon(0_0,100%_0,100%_66%,0_100%)]" />
+      <div className="absolute inset-0 [clip-path:polygon(0_0,100%_0,100%_82%,0_100%)] bg-[linear-gradient(150deg,#d6f3ff_0%,#e7e4ff_15%,#c3b8ff_30%,#8d7bff_48%,#635bff_63%,#9b63ff_78%,#ff8ec7_100%)] sm:[clip-path:polygon(0_0,100%_0,100%_68%,0_100%)]" />
 
       <Container className="relative">
-        <div className="grid items-center gap-12 pb-20 pt-14 lg:grid-cols-2 lg:gap-10 lg:pb-28 lg:pt-20">
+        <div className="grid items-center gap-12 pb-16 pt-[104px] sm:pt-[130px] lg:grid-cols-2 lg:gap-10 lg:pb-[90px]">
           <div>
             <Badge variant="glass" className="mb-6">
               <span className="inline-block size-[7px] rounded-full bg-brand" />
